@@ -1,0 +1,37 @@
+/*Styles of the classes that are used in the post.html page */
+.comment {
+	font-size: 12px;
+}
+
+.comment__author {
+	clear:both;
+	float: left;
+	width: 25%;
+
+}
+
+.comment__text {
+	float: right;
+	width: 75%;
+}
+
+.add-comment {
+	clear: both;
+	float: right;
+	width: 75%;
+	position: relative;
+}
+
+.added-comment {
+	font-size: 12px;
+}
+
+.added-comment__field {
+	display: block;
+	width: 100%;
+	margin-top: 2px;
+}
+
+.added-comment__field_type_textarea {
+	font-family: Arial, Helvetica, Tahoma, sans-serif;
+}
