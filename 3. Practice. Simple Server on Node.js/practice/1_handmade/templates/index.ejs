@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page | Posts</title>
+</head>
+<body>
+  <% posts.forEach(function(post) { %>
+    <h2><%= post.name %></h2>
+    <small><%= post.name %></small>
+    <p><%= post.text %></p>
+    <div>
+      <span>Tags: </span>
+      <% post.tags.forEach(function(tag) { %>
+        <a href="#"><%= tag %></a>
+      <% }); %>
+    </div>
+    <div>Comments: <%= post.comments.length %></div>
+    <a href="/post/<%= post.ID %>">Read more...</a>
+
+    <br><br>
+  <% }); %>
+</body>
+</html>

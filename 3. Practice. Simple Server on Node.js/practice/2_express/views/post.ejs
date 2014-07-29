@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page | Posts</title>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script>
+    $(function() {
+      $('#commentForm').on('submit', function(e) {
+        e.preventDefault();
+        var form = e.target;
+
+        $.ajax({
+          url: form.action,
+          type: form.method,
+          data: {
+            name: form.name.value,
+            text: form.text.value,
+            email: form.email.value,
+            website: form.website.value
+          },
+          complete: function(res, status) {
+            if(status === 'success') {
+              $('#commentsList').html(res.responseText);
+              document.forms.commentForm.reset();
+            } else {
+              alert('comment failed');
+              console.log(res, status);
+            }
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <a href="/posts">Back to homepage</a>
+
+  <h2><%= post.name %></h2>
+  <small><%= post.name %></small>
+  <p><%= post.text %></p>
+  <div>
+    <span>Tags: </span>
+    <% post.tags.forEach(function(tag) { %>
+      <a href="#"><%= tag %></a>
+    <% }); %>
+  </div>
+  <div>Comments:</div>
+  <div id="commentsList">
+    <%- include comments %>
+  </div>
+  <form action="/post/<%= post.ID %>" id="commentForm" method="post">
+    <textarea name="text" id="" cols="30" rows="10" placeholder="Place a comment"></textarea><br>
+    <input type="text" name="name" placeholder="name"><br>
+    <input type="text" name="email" placeholder="email"><br>
+    <input type="text" name="website" placeholder="website"><br>
+    <button type="submmit">Отправить</button>
+  </form>
+</body>
+</html>
