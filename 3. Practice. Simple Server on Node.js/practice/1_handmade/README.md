@@ -1,9 +1,13 @@
 #To start:
 
-1. npm isntall
-2. node run.js
+```console
+npm isntall
+node run.js
+```
 OR
+```console
 node-dev run.js (if you've installed node-dev package)
+```
 
 #References:
 - http://nodejs.org/api/
