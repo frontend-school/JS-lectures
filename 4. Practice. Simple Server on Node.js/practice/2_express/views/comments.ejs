@@ -1,0 +1,11 @@
+<ul>
+  <% post.comments.forEach(function(comment) { %>
+  <li>
+    <h4><%= comment.name %></h4>
+    <small><%= comment.date %></small>
+    <p><%= comment.text %></p>
+    <a href="mailto:<%= comment.email %>"><%= comment.email %></a><br>
+    <a href="<%= comment.website %>"><%= comment.website %></a>
+  </li>
+  <% }); %>
+</ul>

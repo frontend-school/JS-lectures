@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page | Posts</title>
+</head>
+<body>
+  <a href="/posts">Back to homepage</a>
+
+  <h2><%= post.name %></h2>
+  <small><%= post.name %></small>
+  <p><%= post.text %></p>
+  <div>
+    <span>Tags: </span>
+    <% post.tags.forEach(function(tag) { %>
+      <a href="#"><%= tag %></a>
+    <% }); %>
+  </div>
+  <div>Comments:</div>
+  <ul>
+    <% post.comments.forEach(function(comment) { %>
+    <li>
+      <h4><%= comment.name %></h4>
+      <small><%= comment.date %></small>
+      <p><%= comment.text %></p>
+      <a href="mailto:<%= comment.email %>"><%= comment.email %></a><br>
+      <a href="<%= comment.website %>"><%= comment.website %></a>
+    </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

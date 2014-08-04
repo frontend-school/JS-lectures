@@ -1,0 +1,10 @@
+{
+  "name": "SimpleServer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "run.js",
+  "license": "ISC",
+  "devDependencies": {
+    "ejs": "^1.0.0"
+  }
+}

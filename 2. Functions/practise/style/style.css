@@ -1,0 +1,201 @@
+/*Properties of the biggest blocks*/
+
+body {
+	font-family: Arial, Helvetica, Tahoma, sans-serif;
+	width: 95%;
+	margin: auto;
+}
+
+.header {
+	background-color: #cccccc;
+	height: 70px;
+	display: block;
+	line-height: 70px;
+}
+
+.section {
+	display: block;
+	width: 100%;
+	background-color: white;
+	float: left;
+}
+.main {
+	width: 75%;
+	float: left;
+	display: block;
+	position: relative;
+}
+ 
+.aside{
+	width: 25%; 
+	float: right;
+	display: inline-block;
+	position: relative;
+}
+
+.footer {
+	background-color: #cccccc;
+	height: 50px;
+	clear: left;
+	display: block;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	margin-top: 30px;
+}
+
+
+/*Header blocks*/
+.logo {
+	height: 60px;
+	width: 100px;
+	background-color: white;
+	margin: 5px;
+	float: left;
+	line-height: 60px;
+	text-align: center;
+	font-weight: bold;
+}
+
+a.logo {
+	text-decoration: none;	
+	color: black;
+}
+
+a:hover.logo  {
+	color: gray;
+}
+
+a:visited.logo {
+	color: black;
+}
+
+.nav {
+	float: right;
+	height: 60px;
+	background-color: white;
+	margin: 5px;
+	display: inline-block;
+	line-height: 60px;
+	padding: 0 15px;
+}
+.post {
+	height: 200px;
+	overflow: hidden;
+}
+
+a.nav_type_a {
+	text-decoration: none;	
+	color: black;
+}
+
+a:hover.nav_type_a {
+	color: gray;
+}
+
+a:visited.nav_type_a {
+	color: black;
+}
+
+.search {
+	float: right;
+	display: inline-block;
+	vertical-align: center;
+	clear:right;
+}
+
+
+/*Main and aside blocks*/
+.post__time {
+	color: gray;
+	font-size: 14px;
+}
+
+.tags{
+	color: white;
+	display: block;
+	margin-left: -40px;
+}
+
+.tag {
+	background: #4388cc;
+	display: inline-block;
+	margin-right: 10px;
+	padding: 3px 10px;
+	position: relative;
+	list-style-type: none;	
+}
+
+a.tag_type_a {
+	text-decoration: none;	
+	color: white;
+}
+
+a:hover.tag_type_a {
+	color: white;
+}
+
+a:visited.tag_type_a {
+	color: white;
+}
+
+.social-links {
+	margin-top: 15px;
+	background-color: gray;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+}
+
+.float-clear {
+	clear:both;
+}
+
+.indent {
+	height: 35px;
+	content: "";	
+}
+
+
+.widet {
+	float: right;
+}
+
+.widget__header{
+	float: right;
+	clear: right;
+}
+
+.categories {
+	list-style-type: none;		
+	float: right;
+	clear: right;
+	text-align: right;
+	text-decoration: none;
+}
+
+.categories a {
+	text-decoration: none;	
+	color: black;
+}
+
+.categories a:hover {
+	color: black;
+}
+
+.categories a:visited {
+	color: black;
+}
+.widget__tags {
+	float: right;
+	clear: right;
+	text-align: right;
+	margin-right: -10px;
+	margin-left: 10px;
+
+}
+
+/*Footer blocks*/
